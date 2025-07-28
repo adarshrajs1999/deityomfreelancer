@@ -6,6 +6,31 @@
     <title>Deityom Marketing - Freelancer Management System</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Add this temporary CSS for testing */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: #fff;
+                padding: 20px;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            .mobile-menu {
+                display: block;
+                cursor: pointer;
+            }
+        }
+    </style>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -16,7 +41,7 @@
                 <p>Digital Marketing Agency | Kozhikode, Kerala</p>
             </div>
             <nav>
-                <ul>
+                <ul id="navMenu">
                     <li><a href="#" class="active">Home</a></li>
                     <li><a href="#features">Features</a></li>
                     <li><a href="#about">About Us</a></li>
@@ -24,7 +49,7 @@
                     <li><a href="login.html" class="btn-login">Login</a></li>
                 </ul>
             </nav>
-            <div class="mobile-menu">
+            <div class="mobile-menu" id="mobileMenuBtn">
                 <i class="fas fa-bars"></i>
             </div>
         </div>
@@ -157,46 +182,16 @@
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-about">
-                    <h3>Deityom Marketing</h3>
-                    <p>Digital Marketing Agency based in Kozhikode, Kerala specializing in comprehensive online marketing solutions.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                
-                <div class="footer-links">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <li><a href="login.html">Login</a></li>
-                        <li><a href="register.html">Register</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-contact">
-                    <h3>Contact Info</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> Kozhikode, Kerala</p>
-                    <p><i class="fas fa-envelope"></i> deityommarketing@gmail.com</p>
-                    <p><i class="fas fa-phone"></i> +91 XXXXX XXXXX</p>
-                </div>
-            </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const navMenu = document.getElementById('navMenu');
             
-            <div class="footer-bottom">
-                <p>&copy; 2023 Deityom Marketing. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
-
+            mobileMenuBtn.addEventListener('click', function() {
+                navMenu.classList.toggle('show');
+            });
+        });
+    </script>
     <script src="js/main.js"></script>
 </body>
 </html>

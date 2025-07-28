@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelancer Dashboard | Deityom Marketing</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <h2>Deityom Marketing</h2>
+                    <p>Freelancer Dashboard</p>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active">
+                        <a href="freelancer-dashboard.html">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="projects.html">
+                            <i class="fas fa-tasks"></i>
+                            <span>My Projects</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="payments.html">
+                            <i class="fas fa-money-bill-wave"></i>
+                            <span>Payments</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-file-alt"></i>
+                            <span>Work Submission</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="profile.html">
+                            <i class="fas fa-user-cog"></i>
+                            <span>Profile</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <a href="#" id="logoutBtn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Navigation -->
+            <header class="top-nav">
+                <div class="nav-left">
+                    <button class="sidebar-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h3>Dashboard Overview</h3>
+                </div>
+                
+                <div class="nav-right">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search...">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    
+                    <div class="notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">2</span>
+                    </div>
+                    
+                    <div class="user-profile">
+                        <img src="images/freelancer-avatar.jpg" alt="Freelancer">
+                        <span>Freelancer</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard Content -->
+            <div class="dashboard-content">
+                <!-- Welcome Banner -->
+                <div class="welcome-banner">
+                    <div class="welcome-content">
+                        <h2>Welcome back, <span id="freelancerName">Freelancer</span>!</h2>
+                        <p>You have <strong>3 active projects</strong> with deadlines approaching. Keep up the good work!</p>
+                        <a href="projects.html" class="btn-primary">View Projects</a>
+                    </div>
+                    <div class="welcome-image">
+                        <img src="images/freelancer-welcome.png" alt="Welcome">
+                    </div>
+                </div>
+
+                <!-- Stats Cards -->
+                <div class="stats-cards">
+                    <div class="stats-card">
+                        <div class="stats-info">
+                            <h4>Active Projects</h4>
+                            <h2>3</h2>
+                            <p><span class="success">1 new</span> this week</p>
+                        </div>
+                        <div class="stats-icon">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="stats-card">
+                        <div class="stats-info">
+                            <h4>Tasks Completed</h4>
+                            <h2>12</h2>
+                            <p><span class="success">92%</span> on time</p>
+                        </div>
+                        <div class="stats-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="stats-card">
+                        <div class="stats-info">
+                            <h4>Earnings This Month</h4>
+                            <h2>₹18,500</h2>
+                            <p><span class="success">+₹3,200</span> from last month</p>
+                        </div>
+                        <div class="stats-icon">
+                            <i class="fas fa-money-bill-wave"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="stats-card">
+                        <div class="stats-info">
+                            <h4>Client Rating</h4>
+                            <h2>4.8</h2>
+                            <p><span class="success">+0.2</span> this quarter</p>
+                        </div>
+                        <div class="stats-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Current Projects -->
+                <div class="dashboard-section">
+                    <div class="section-header">
+                        <h4>Current Projects</h4>
+                        <a href="projects.html" class="btn-view-all">View All</a>
+                    </div>
+                    
+                    <div class="projects-list">
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h5>SEO for Kerala Tourism</h5>
+                                <span class="status in-progress">In Progress</span>
+                            </div>
+                            <div class="project-details">
+                                <p>Optimize website for Kerala tourism keywords and improve ranking</p>
+                                <div class="project-meta">
+                                    <span><i class="fas fa-calendar-alt"></i> Deadline: 15 Oct 2023</span>
+                                    <span><i class="fas fa-coins"></i> ₹12,000</span>
+                                </div>
+                            </div>
+                            <div class="project-actions">
+                                <a href="#" class="btn-secondary">View Details</a>
+                                <a href="#" class="btn-primary">Submit Work</a>
+                            </div>
+                        </div>
+                        
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h5>Social Media Content</h5>
+                                <span class="status in-progress">In Progress</span>
+                            </div>
+                            <div class="project-details">
+                                <p>Create monthly content calendar and posts for Facebook/Instagram</p>
+                                <div class="project-meta">
+                                    <span><i class="fas fa-calendar-alt"></i> Deadline: 20 Oct 2023</span>
+                                    <span><i class="fas fa-coins"></i> ₹8,500</span>
+                                </div>
+                            </div>
+                            <div class="project-actions">
+                                <a href="#" class="btn-secondary">View Details</a>
+                                <a href="#" class="btn-primary">Submit Work</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Payments -->
+                <div class="dashboard-section">
+                    <div class="section-header">
+                        <h4>Recent Payments</h4>
+                        <a href="payments.html" class="btn-view-all">View All</a>
+                    </div>
+                    
+                    <div class="payments-list">
+                        <div class="payment-item">
+                            <div class="payment-info">
+                                <h5>Content Writing Project</h5>
+                                <p>Completed on 5 Sep 2023</p>
+                            </div>
+                            <div class="payment-amount">
+                                <h4>₹6,500</h4>
+                                <span class="status completed">Received</span>
+                            </div>
+                        </div>
+                        
+                        <div class="payment-item">
+                            <div class="payment-info">
+                                <h5>Website Copywriting</h5>
+                                <p>Completed on 20 Aug 2023</p>
+                            </div>
+                            <div class="payment-amount">
+                                <h4>₹9,000</h4>
+                                <span class="status completed">Received</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script src="js/freelancer.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

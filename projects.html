@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Deityom Marketing</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <h2>Deityom Marketing</h2>
+                    <p id="dashboardType">Admin Dashboard</p>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="admin-dashboard.html" id="dashboardLink">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="projects.html">
+                            <i class="fas fa-tasks"></i>
+                            <span id="projectsLabel">Projects</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="payments.html">
+                            <i class="fas fa-money-bill-wave"></i>
+                            <span>Payments</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" id="freelancersLink">
+                            <i class="fas fa-users"></i>
+                            <span>Freelancers</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="profile.html">
+                            <i class="fas fa-user-cog"></i>
+                            <span>Profile</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <a href="#" id="logoutBtn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Navigation -->
+            <header class="top-nav">
+                <div class="nav-left">
+                    <button class="sidebar-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h3>Project Management</h3>
+                </div>
+                
+                <div class="nav-right">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search projects...">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    
+                    <div class="notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">2</span>
+                    </div>
+                    
+                    <div class="user-profile">
+                        <img src="images/admin-avatar.jpg" id="userAvatar" alt="User">
+                        <span id="userRole">Admin</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Projects Content -->
+            <div class="dashboard-content">
+                <!-- Projects Header -->
+                <div class="section-header with-actions">
+                    <h4>All Projects</h4>
+                    <div class="actions">
+                        <button class="btn-secondary" id="filterBtn">
+                            <i class="fas fa-filter"></i> Filter
+                        </button>
+                        <button class="btn-primary" id="addProjectBtn">
+                            <i class="fas fa-plus"></i> Add Project
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Projects Table -->
+                <div class="projects-table-container">
+                    <table class="projects-table">
+                        <thead>
+                            <tr>
+                                <th>Project Name</th>
+                                <th>Client</th>
+                                <th>Freelancer</th>
+                                <th>Start Date</th>
+                                <th>Deadline</th>
+                                <th>Status</th>
+                                <th>Budget</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>SEO for Kerala Tourism</td>
+                                <td>Kerala Tourism Dept</td>
+                                <td>Rahul Kumar</td>
+                                <td>01 Sep 2023</td>
+                                <td>15 Oct 2023</td>
+                                <td><span class="status in-progress">In Progress</span></td>
+                                <td>₹12,000</td>
+                                <td>
+                                    <button class="btn-action"><i class="fas fa-eye"></i></button>
+                                    <button class="btn-action"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-action danger"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Social Media Campaign</td>
+                                <td>Malabar Spices</td>
+                                <td>Priya Nair</td>
+                                <td>10 Sep 2023</td>
+                                <td>20 Oct 2023</td>
+                                <td><span class="status pending">Pending</span></td>
+                                <td>₹8,500</td>
+                                <td>
+                                    <button class="btn-action"><i class="fas fa-eye"></i></button>
+                                    <button class="btn-action"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-action danger"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Website Redesign</td>
+                                <td>Calicut Times</td>
+                                <td>Arun Menon</td>
+                                <td>15 Aug 2023</td>
+                                <td>05 Oct 2023</td>
+                                <td><span class="status completed">Completed</span></td>
+                                <td>₹25,000</td>
+                                <td>
+                                    <button class="btn-action"><i class="fas fa-eye"></i></button>
+                                    <button class="btn-action"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-action danger"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Content Writing</td>
+                                <td>Kozhikode Food Blog</td>
+                                <td>Deepa Raj</td>
+                                <td>20 Sep 2023</td>
+                                <td>12 Oct 2023</td>
+                                <td><span class="status in-progress">In Progress</span></td>
+                                <td>₹6,500</td>
+                                <td>
+                                    <button class="btn-action"><i class="fas fa-eye"></i></button>
+                                    <button class="btn-action"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-action danger"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>PPC Campaign</td>
+                                <td>Mappila Cuisine</td>
+                                <td>Vishnu Prasad</td>
+                                <td>05 Oct 2023</td>
+                                <td>25 Oct 2023</td>
+                                <td><span class="status not-started">Not Started</span></td>
+                                <td>₹15,000</td>
+                                <td>
+                                    <button class="btn-action"><i class="fas fa-eye"></i></button>
+                                    <button class="btn-action"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-action danger"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination">
+                    <button class="btn-pagination" disabled>
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="btn-pagination active">1</button>
+                    <button class="btn-pagination">2</button>
+                    <button class="btn-pagination">3</button>
+                    <button class="btn-pagination">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Add Project Modal -->
+    <div class="modal" id="addProjectModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Add New Project</h4>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="addProjectForm">
+                    <div class="form-group">
+                        <label for="projectName">Project Name</label>
+                        <input type="text" id="projectName" name="projectName" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="clientName">Client Name</label>
+                        <input type="text" id="clientName" name="clientName" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="projectDescription">Description</label>
+                        <textarea id="projectDescription" name="projectDescription" rows="3" required></textarea>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="startDate">Start Date</label>
+                            <input type="date" id="startDate" name="startDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="deadline">Deadline</label>
+                            <input type="date" id="deadline" name="deadline" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="freelancer">Assign Freelancer</label>
+                            <select id="freelancer" name="freelancer" required>
+                                <option value="">Select Freelancer</option>
+                                <option value="1">Rahul Kumar (SEO Specialist)</option>
+                                <option value="2">Priya Nair (Social Media)</option>
+                                <option value="3">Arun Menon (Web Developer)</option>
+                                <option value="4">Deepa Raj (Content Writer)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="budget">Budget (₹)</label>
+                            <input type="number" id="budget" name="budget" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="projectStatus">Status</label>
+                        <select id="projectStatus" name="projectStatus" required>
+                            <option value="not-started">Not Started</option>
+                            <option value="pending">Pending</option>
+                            <option value="in-progress">In Progress</option>
+                            <option value="completed">Completed</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn-secondary modal-close">Cancel</button>
+                        <button type="submit" class="btn-primary">Add Project</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script src="js/projects.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile | Deityom Marketing</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <h2>Deityom Marketing</h2>
+                    <p id="dashboardType">Admin Dashboard</p>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="admin-dashboard.html" id="dashboardLink">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="projects.html">
+                            <i class="fas fa-tasks"></i>
+                            <span>Projects</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="payments.html">
+                            <i class="fas fa-money-bill-wave"></i>
+                            <span>Payments</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" id="freelancersLink">
+                            <i class="fas fa-users"></i>
+                            <span>Freelancers</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="profile.html">
+                            <i class="fas fa-user-cog"></i>
+                            <span>Profile</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <a href="#" id="logoutBtn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Navigation -->
+            <header class="top-nav">
+                <div class="nav-left">
+                    <button class="sidebar-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h3>Profile Settings</h3>
+                </div>
+                
+                <div class="nav-right">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search...">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    
+                    <div class="notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">1</span>
+                    </div>
+                    
+                    <div class="user-profile">
+                        <img src="images/admin-avatar.jpg" id="userAvatar" alt="User">
+                        <span id="userRole">Admin</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Profile Content -->
+            <div class="dashboard-content">
+                <div class="profile-container">
+                    <div class="profile-header">
+                        <div class="profile-avatar">
+                            <img src="images/admin-avatar.jpg" alt="Profile" id="profileImage">
+                            <button class="btn-change-avatar" id="changeAvatarBtn">
+                                <i class="fas fa-camera"></i>
+                            </button>
+                        </div>
+                        <div class="profile-info">
+                            <h2 id="profileName">Admin User</h2>
+                            <p id="profileRole">Administrator</p>
+                            <p id="profileEmail">deityommarketing@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="profile-tabs">
+                        <button class="tab-btn active" data-tab="personal">Personal Info</button>
+                        <button class="tab-btn" data-tab="security">Security</button>
+                        <button class="tab-btn" data-tab="notifications">Notifications</button>
+                    </div>
+
+                    <div class="tab-content active" id="personal-tab">
+                        <form id="personalInfoForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name</label>
+                                    <input type="text" id="firstName" name="firstName" value="Admin">
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name</label>
+                                    <input type="text" id="lastName" name="lastName" value="User">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" value="deityommarketing@gmail.com" disabled>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="Enter phone number">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="address">Address</label>
+                                <textarea id="address" name="address" rows="3" placeholder="Enter your address"></textarea>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="reset" class="btn-secondary">Cancel</button>
+                                <button type="submit" class="btn-primary">Save Changes</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="tab-content" id="security-tab">
+                        <form id="securityForm">
+                            <div class="form-group">
+                                <label for="currentPassword">Current Password</label>
+                                <input type="password" id="currentPassword" name="currentPassword" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="newPassword">New Password</label>
+                                <input type="password" id="newPassword" name="newPassword" required>
+                                <div class="password-strength">
+                                    <span class="strength-bar"></span>
+                                    <span class="strength-bar"></span>
+                                    <span class="strength-bar"></span>
+                                    <span class="strength-text">Password strength</span>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="confirmPassword">Confirm New Password</label>
+                                <input type="password" id="confirmPassword" name="confirmPassword" required>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="reset" class="btn-secondary">Cancel</button>
+                                <button type="submit" class="btn-primary">Change Password</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="tab-content" id="notifications-tab">
+                        <form id="notificationsForm">
+                            <h4>Email Notifications</h4>
+                            <div class="form-group toggle-group">
+                                <label for="projectAssign">New Project Assignment</label>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" id="projectAssign" name="projectAssign" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            
+                            <div class="form-group toggle-group">
+                                <label for="paymentReceived">Payment Received</label>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" id="paymentReceived" name="paymentReceived" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            
+                            <div class="form-group toggle-group">
+                                <label for="systemUpdates">System Updates</label>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" id="systemUpdates" name="systemUpdates" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            
+                            <h4>In-App Notifications</h4>
+                            <div class="form-group toggle-group">
+                                <label for="taskReminders">Task Reminders</label>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" id="taskReminders" name="taskReminders" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            
+                            <div class="form-group toggle-group">
+                                <label for="deadlineAlerts">Deadline Alerts</label>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" id="deadlineAlerts" name="deadlineAlerts" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="reset" class="btn-secondary">Reset</button>
+                                <button type="submit" class="btn-primary">Save Preferences</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Change Avatar Modal -->
+    <div class="modal" id="avatarModal">
+        <div class="modal-content small">
+            <div class="modal-header">
+                <h4>Change Profile Picture</h4>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="avatar-options">
+                    <div class="avatar-upload">
+                        <label for="avatarFile" class="btn-primary">
+                            <i class="fas fa-upload"></i> Upload New
+                        </label>
+                        <input type="file" id="avatarFile" accept="image/*" style="display: none;">
+                    </div>
+                    <p>or</p>
+                    <button class="btn-secondary" id="removeAvatarBtn">
+                        <i class="fas fa-trash"></i> Remove Current
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
